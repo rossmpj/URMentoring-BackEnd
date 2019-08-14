@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,7 +29,7 @@ class MetodoPago extends Model
     // Relación: PagoTutoria - MetodoPago (1 - 1)
     public function pagoTutorias()
     {
-        return $this->hasOne('App\PagoTutoria');
+        return $this->hasOne('App\Models\Relacional\PagoTutoria');
     }
 
 }

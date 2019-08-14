@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Asignatura extends Model
+class FormacionTutor extends Model
 {
-    protected $table = 'asignaturas';
+    protected $table = 'formacion_tutores';
 
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Asignatura extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre'
+        'nivel_estudios', 'experiencia', 'profesion', 'id_tutor'
     ];
 
     /**
@@ -25,11 +25,11 @@ class Asignatura extends Model
     protected $hidden = [
     	'created_at', 'updated_at'
     ];
-
-    // Relación: Asignatura - AsignaturaTutor (1 - M)
-    public function asignaturaTutores()
-    {
-        return $this->hasMany('App\AsignaturaTutor');
-    }
     
+    // Relación: Tutor - FormacionTutor (1 - 1)
+    public function tutores()
+    {
+        return $this->belongsTo('App\Models\Relacional\Tutor', 'id_tutor');
+    }
+
 }

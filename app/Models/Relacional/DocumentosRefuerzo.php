@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,7 +29,7 @@ class DocumentosRefuerzo extends Model
     // Relación: Tutoria - DocumentosRefuerzo (1 - M)
     public function tutorias()
     {
-        return $this->belongsTo('App\Tutoria', 'id_tutoria');
+        return $this->belongsTo('App\Models\Relacional\Tutoria', 'id_tutoria');
     }
 
 }
