@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,13 +29,13 @@ class Calificacion extends Model
     // Relación: Estudiante - Calificacion (1 - M)
     public function estudiantes()
     {
-        return $this->belongsTo('App\Estudiante', 'id_estudiante');
+        return $this->belongsTo('App\Models\Relacional\Estudiante', 'id_estudiante');
     }
 
     // Relación: Tutor - Calificación (1 - M)
     public function tutores()
     {
-        return $this->belongsTo('App\Tutor', 'id_tutor');
+        return $this->belongsTo('App\Models\Relacional\Tutor', 'id_tutor');
     }
 
 }

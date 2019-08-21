@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MetodoPago extends Model
+class DocumentosRefuerzo extends Model
 {
-    protected $table = 'metodo_pagos';
+    protected $table = 'documentos_refuerzos';
 
     /**
      * The attributes that are mass assignable.
@@ -14,9 +14,9 @@ class MetodoPago extends Model
      * @var array
      */
     protected $fillable = [
-        'tipo', 'detalle'
+        'descripcion', 'comentario', 'id_tutoria'
     ];
-    
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -26,10 +26,10 @@ class MetodoPago extends Model
     	'created_at', 'updated_at'
     ];
 
-    // Relación: PagoTutoria - MetodoPago (1 - 1)
-    public function pagoTutorias()
+    // Relación: Tutoria - DocumentosRefuerzo (1 - M)
+    public function tutorias()
     {
-        return $this->hasOne('App\PagoTutoria');
+        return $this->belongsTo('App\Models\Relacional\Tutoria', 'id_tutoria');
     }
 
 }

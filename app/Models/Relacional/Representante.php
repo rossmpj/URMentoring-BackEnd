@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,13 +29,13 @@ class Representante extends Model
     // Relación: Representante - Estudiante (1 - M)
     public function estudiantes()
     {
-        return $this->hasMany('App\Estudiante');
+        return $this->hasMany('App\Models\Relacional\Estudiante');
     }
 
     // Relación: Representante - PagoTutoria (1 - M)
     public function pago_tutorias()
     {
-        return $this->hasMany('App\PagoTutoria');
+        return $this->hasMany('App\Models\Relacional\PagoTutoria');
     }
 
 }

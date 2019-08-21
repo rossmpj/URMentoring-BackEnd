@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,19 +29,19 @@ class AsignaturaTutor extends Model
     // Relación: Tutor - AsignaturaTutor (1 - M)
     public function tutores()
     {
-        return $this->belongsTo('App\Tutor', 'id_tutor');
+        return $this->belongsTo('App\Models\Relacional\Tutor', 'id_tutor');
     }
 
     // Relación: Asignatura - AsignaturaTutor (1 - M)
     public function asignaturas()
     {
-        return $this->belongsTo('App\Asignatura', 'id_asignatura');
+        return $this->belongsTo('App\Models\Relacional\Asignatura', 'id_asignatura');
     }
 
     // Relación: AsignaturaTutor - Tutoria (1 - M)
     public function tutorias()
     {
-        return $this->hasMany('App\Tutoria');
+        return $this->hasMany('App\Models\Relacional\Tutoria');
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,19 +29,19 @@ class PagoTutoria extends Model
     // Relación: Representante - PagoTutoria (1 - M)
     public function representantes()
     {
-        return $this->belongsTo('App\Representante', 'id_representante');
+        return $this->belongsTo('App\Models\Relacional\Representante', 'id_representante');
     }
 
     // Relación: PagoTutoria - MetodoPago (1 - 1)
     public function metodoPagos()
     {
-        return $this->belongsTo('App\MetodoPago', 'id_metodo_pago');
+        return $this->belongsTo('App\Models\Relacional\MetodoPago', 'id_metodo_pago');
     }
 
     // Relación: PagoTutoria - Tutoria (1 - 1)
     public function tutorias()
     {
-        return $this->belongsTo('App\Tutoria', 'id_tutoria');
+        return $this->belongsTo('App\Models\Relacional\Tutoria', 'id_tutoria');
     }
 
 }

@@ -1,0 +1,1051 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API ",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/asignaturas": {
+            "get": {
+                "summary": "Mostrar todos las asignaturas.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\AsignaturaController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar una nueva Asignatura.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "nomre": {
+                                        "description": "Nombre de la asignatura",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/asignaturas/{id}": {
+            "get": {
+                "summary": "Buscar una asignatura por su id",
+                "description": "Retorna una asignatura",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la asignatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, provicia no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar una asignatura existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la asignatura actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "nombre": {
+                                        "description": "Nombre de la asignatura",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar una asignatura por su id.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada"
+                    }
+                }
+            }
+        },
+        "/api/asignaturatutores": {
+            "get": {
+                "summary": "Mostrar todos las asignaturas.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\AsignaturaTutorController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar una nueva relación Asignatura-Tutor.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id_asignatura": {
+                                        "description": "ID de la asignatura",
+                                        "type": "integer"
+                                    },
+                                    "id_tutor": {
+                                        "description": "ID del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/asignaturatutores/{id}": {
+            "get": {
+                "summary": "Buscar una asignatura por su id",
+                "description": "Retorna una asignatura",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID  de la relación Asignatura-Tutor",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, provicia no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar una asignatura-tutor existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la asignatura actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a actualizar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id_asignatura": {
+                                        "description": "ID de la asignatura",
+                                        "type": "integer"
+                                    },
+                                    "id_tutor": {
+                                        "description": "ID del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Relación no encontrada."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar una asignatura por su id.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Relación no encontrada"
+                    }
+                }
+            }
+        },
+        "/api/estudiantes": {
+            "get": {
+                "summary": "Mostrar todos los estudiantes.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\EstudianteController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar un nuevo Estudiante.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Cédula del estudiante",
+                                        "type": "string"
+                                    },
+                                    "nombre": {
+                                        "description": "Nombre del estudiante",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del estudiante",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del estudiante, F:femenino - M:masculino",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del estudiante",
+                                        "type": "date"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del estudiante",
+                                        "type": "string"
+                                    },
+                                    "id_representante": {
+                                        "description": "Cédula del representante",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/estudiantes/{id}": {
+            "get": {
+                "summary": "Buscar un estudiante por su id",
+                "description": "Retorna los datos del estudiante",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del estudiante",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, provicia no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar un estudiante existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del estudiante a actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a actualizar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "nombre": {
+                                        "description": "Nombre del estudiante a actualizar",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del estudiante a actualizar",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del estudiante, F:femenino - M:masculino",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del estudiante",
+                                        "type": "date"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del estudiante",
+                                        "type": "string"
+                                    },
+                                    "id_representante": {
+                                        "description": "Cédula del representante",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Estudiante no encontrado."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar un estudiante.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Estudiante no encontrado"
+                    }
+                }
+            }
+        },
+        "/api/formaciontutores": {
+            "get": {
+                "summary": "Mostrar todos los datos relacionados a tutor.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\FormacionTutorController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar nueva informacion de la formacion de un Tutor.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "nivel_estudios": {
+                                        "description": "Nivel de estudios del tutor",
+                                        "type": "string"
+                                    },
+                                    "experiencia": {
+                                        "description": "Experiencia del tutor",
+                                        "type": "string"
+                                    },
+                                    "profesion": {
+                                        "description": "Profesión del tutor",
+                                        "type": "string"
+                                    },
+                                    "id_tutor": {
+                                        "description": "Cédula del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/formaciontutores/{id_tutor}": {
+            "get": {
+                "summary": "Buscar la formacion de un tutor por su id",
+                "description": "Retorna los datos del tutor",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id_tutor",
+                        "in": "path",
+                        "description": "ID del tutor",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, Formación Tutor no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar la formación de un tutor existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id_tutor",
+                        "in": "path",
+                        "description": "Cédula del tutor a actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "nivel_estudios": {
+                                        "description": "Nivel de estudios del tutor",
+                                        "type": "string"
+                                    },
+                                    "experiencia": {
+                                        "description": "Experiencia del tutor",
+                                        "type": "string"
+                                    },
+                                    "profesion": {
+                                        "description": "Profesión del tutor",
+                                        "type": "string"
+                                    },
+                                    "id_tutor": {
+                                        "description": "Cédula del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar la formación de un tutor dada el id del tutor.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id_tutor",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada"
+                    }
+                }
+            }
+        },
+        "/api/representantes": {
+            "get": {
+                "summary": "Mostrar todos los representantes.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\RepresentanteController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar un nuevo Representante.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Cédula del representante",
+                                        "type": "string"
+                                    },
+                                    "nombre": {
+                                        "description": "Nombre del representante",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del representante",
+                                        "type": "string"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del representante",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del representante, F:femenino - M:representante",
+                                        "type": "string"
+                                    },
+                                    "telefono": {
+                                        "description": "Teléfono del representante",
+                                        "type": "string"
+                                    },
+                                    "ciudad": {
+                                        "description": "Ciudad del representante",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del representante",
+                                        "type": "date"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/representantes/{id}": {
+            "get": {
+                "summary": "Buscar un representante por su id",
+                "description": "Retorna los datos del representante",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del representante",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, provicia no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar un representante existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del representante a actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a actualizar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Cédula del representante",
+                                        "type": "string"
+                                    },
+                                    "nombre": {
+                                        "description": "Nombre del representante",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del representante",
+                                        "type": "string"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del representante",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del representante, F:femenino - M:representante",
+                                        "type": "string"
+                                    },
+                                    "telefono": {
+                                        "description": "Teléfono del representante",
+                                        "type": "string"
+                                    },
+                                    "ciudad": {
+                                        "description": "Ciudad del representante",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del representante",
+                                        "type": "date"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Representante no encontrado."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar un representante.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Representante no encontrado"
+                    }
+                }
+            }
+        },
+        "/api/tutores": {
+            "get": {
+                "summary": "Mostrar todos los tutores.",
+                "operationId": "App\\Http\\Controllers\\Relacional\\TutorController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar un nuevo Tutor.",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Cédula del tutor",
+                                        "type": "string"
+                                    },
+                                    "nombre": {
+                                        "description": "Nombre del tutor",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del tutor",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del tutor, F:femenino - M:masculino",
+                                        "type": "string"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del estudiante",
+                                        "type": "string"
+                                    },
+                                    "telefono": {
+                                        "description": "Teléfono del tutor",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del tutor",
+                                        "type": "date"
+                                    },
+                                    "ciudad": {
+                                        "description": "Ciudad del representante",
+                                        "type": "string"
+                                    },
+                                    "presentacion": {
+                                        "description": "Presentación del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "405": {
+                        "description": "Error en la operación. Ingreso inválido."
+                    }
+                }
+            }
+        },
+        "/api/tutores/{id}": {
+            "get": {
+                "summary": "Buscar un tutor por su id",
+                "description": "Retorna los datos del tutor",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del tutor",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, provicia no existe"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Actualizar un tutor existente",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del tutor a actualizar",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Ingreso de la información a guardar",
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Cédula del tutor",
+                                        "type": "string"
+                                    },
+                                    "nombre": {
+                                        "description": "Nombre del tutor",
+                                        "type": "string"
+                                    },
+                                    "apellido": {
+                                        "description": "Apellido del tutor",
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "description": "Sexo del tutor, F:femenino - M:masculino",
+                                        "type": "string"
+                                    },
+                                    "correo": {
+                                        "description": "Correo del estudiante",
+                                        "type": "string"
+                                    },
+                                    "telefono": {
+                                        "description": "Teléfono del tutor",
+                                        "type": "string"
+                                    },
+                                    "fecha_nac": {
+                                        "description": "Fecha de nacimiento del tutor",
+                                        "type": "date"
+                                    },
+                                    "ciudad": {
+                                        "description": "Ciudad del representante",
+                                        "type": "string"
+                                    },
+                                    "presentacion": {
+                                        "description": "Presentación del tutor",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Actualización realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada."
+                    },
+                    "405": {
+                        "description": "Error en la operación."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Eliminar un tutor.",
+                "operationId": "destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "ID Inválido"
+                    },
+                    "404": {
+                        "description": "Provincia no encontrada"
+                    }
+                }
+            }
+        }
+    }
+}
