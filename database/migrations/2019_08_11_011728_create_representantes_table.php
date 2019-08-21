@@ -19,7 +19,7 @@ class CreateRepresentantesTable extends Migration
             $table->string('apellido');
             $table->string('correo')->unique();
             $table->char('sexo', 1);
-            $table->string('telefono', 10);
+            $table->string('telefono');
             $table->string('ciudad');
             $table->date('fecha_nac');
             $table->timestamps();

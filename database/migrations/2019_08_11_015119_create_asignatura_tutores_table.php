@@ -17,7 +17,7 @@ class CreateAsignaturaTutoresTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
 
-            $table->bigInteger('id_asignatura')->unsigned();
+            $table->string('id_asignatura');
             $table->string('id_tutor', 10);
 
             $table->foreign('id_asignatura')

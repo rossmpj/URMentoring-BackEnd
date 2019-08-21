@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MetodoPago extends Model
 {
-    protected $table = 'metodos_pago';
+    protected $table = 'metodo_pagos';
 
     /**
      * The attributes that are mass assignable.
