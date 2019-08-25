@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Representante;
+use App\Models\Relacional\Representante;
 
 class RepresentanteSeeder extends Seeder
 {

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Calificacion;      
+use App\Models\Relacional\Calificacion;      
 
 class CalificacionSeeder extends Seeder
 {

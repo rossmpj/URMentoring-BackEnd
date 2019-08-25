@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Tutor;
+use App\Models\Relacional\Tutor;
 
 class TutorSeeder extends Seeder
 {

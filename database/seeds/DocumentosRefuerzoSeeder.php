@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\DocumentosRefuerzo;
+use App\Models\Relacional\DocumentosRefuerzo;
 
 class DocumentosRefuerzoSeeder extends Seeder
 {

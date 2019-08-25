@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\PagoTutoria;
+use App\Models\Relacional\PagoTutoria;
 
 class PagoTutoriaSeeder extends Seeder
 {

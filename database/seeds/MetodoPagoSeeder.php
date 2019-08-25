@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\MetodoPago;
+use App\Models\Relacional\MetodoPago;
 
 class MetodoPagoSeeder extends Seeder
 {

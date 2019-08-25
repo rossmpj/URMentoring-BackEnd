@@ -13,7 +13,8 @@
         "fideloper/proxy": "^4.0",
         "jenssegers/mongodb": "^3.5",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "spatie/laravel-cors": "^1.5"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -39,8 +40,7 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories",
-            "database/providers"
+            "database/factories"
         ]
     },
     "autoload-dev": {
