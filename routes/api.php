@@ -19,3 +19,4 @@ Route::resource('tutores','Relacional\TutorController');
 Route::resource('formaciontutores','Relacional\FormacionTutorController');
 Route::resource('asignaturas','Relacional\AsignaturaController');
 Route::resource('asignaturatutores','Relacional\AsignaturaTutorController');
+Route::post('mail', 'mailController@contact')->name('enviar');
