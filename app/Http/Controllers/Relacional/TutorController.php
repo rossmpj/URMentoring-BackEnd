@@ -141,7 +141,7 @@ class TutorController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Error, provicia no existe"
+     *         description="Recurso no encontrado"
      *     )
      * )
      *
@@ -231,7 +231,7 @@ class TutorController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Provincia no encontrada."
+     *         description="Recurso no encontrado."
      *     ),
      *     @OA\Response(
      *         response=405,
@@ -276,7 +276,7 @@ class TutorController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Provincia no encontrada",
+     *         description="Recurso no encontrado",
      *     )
      * )
      */

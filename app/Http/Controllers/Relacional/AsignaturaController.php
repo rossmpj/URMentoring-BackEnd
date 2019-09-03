@@ -65,17 +65,16 @@ class AsignaturaController extends Controller
         $est->save();  
     }
 
-    
-     /**
+    /**
      * @OA\Get(
-     *     path="/api/asignaturas/{id}",
-     *     summary="Buscar una asignatura por su id",
-     *     description="Retorna una asignatura",
+     *     path="/api/asignaturas/{id_tutor}",
+     *     summary="Buscar las materias que imparte un tutor, dado su id",
+     *     description="Retorna materias",
      *     operationId="show",
      *     @OA\Parameter(
-     *         name="id",
+     *         name="id_tutor",
      *         in="path",
-     *         description="ID de la asignatura",
+     *         description="ID del tutor",
      *         required=true,
      *         @OA\Schema(
      *             type="string"
@@ -91,16 +90,20 @@ class AsignaturaController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Error, provicia no existe"
+     *         description="Recurso no encontrado"
      *     )
      * )
      *
      */
-    public function show($id)
+    public function show($id_tutor)
     {
-         return Asignatura::where('id',$id)->get();
+        return \DB::table('asignaturas')
+            ->join('asignatura_tutores','asignaturas.id','=','asignatura_tutores.id_asignatura')
+            ->join('tutores','tutores.id','=','asignatura_tutores.id_tutor')
+            ->select('asignaturas.nombre','asignaturas.id')
+            ->where('asignatura_tutores.id_tutor',$id_tutor)
+            ->get(); 
     }
-
 
      /**
      * @OA\Put(

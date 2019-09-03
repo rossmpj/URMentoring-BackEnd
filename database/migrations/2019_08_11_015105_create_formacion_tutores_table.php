@@ -16,7 +16,7 @@ class CreateFormacionTutoresTable extends Migration
         Schema::create('formacion_tutores', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nivel_estudios');
-            $table->string('experiencia');
+            $table->integer('experiencia');
             $table->string('profesion');
             $table->timestamps();
             

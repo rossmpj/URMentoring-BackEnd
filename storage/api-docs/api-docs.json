@@ -5,6 +5,49 @@
         "version": "1.0"
     },
     "paths": {
+        "/api/historicos": {
+            "get": {
+                "summary": "Mostrar todos los datos.",
+                "operationId": "App\\Http\\Controllers\\NoRelacional\\HistoricoController::index",
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "default": {
+                        "description": "Lo sentimos, ha ocurrido un error."
+                    }
+                }
+            }
+        },
+        "/api/historicos/{materia}": {
+            "get": {
+                "summary": "Buscar registros dada una materia impartida por un tutor, ordenados por su nivel de experiencia",
+                "description": "Retorna registro del histórico",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "materia",
+                        "in": "path",
+                        "description": "Nombre de la asignatura",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operación realizada correctamente."
+                    },
+                    "400": {
+                        "description": "Error en la operación."
+                    },
+                    "404": {
+                        "description": "Error, recurso no encontrado"
+                    }
+                }
+            }
+        },
         "/api/asignaturas": {
             "get": {
                 "summary": "Mostrar todos las asignaturas.",
@@ -47,16 +90,16 @@
                 }
             }
         },
-        "/api/asignaturas/{id}": {
+        "/api/asignaturas/{id_tutor}": {
             "get": {
-                "summary": "Buscar una asignatura por su id",
-                "description": "Retorna una asignatura",
+                "summary": "Buscar las materias que imparte un tutor, dado su id",
+                "description": "Retorna materias",
                 "operationId": "show",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "id_tutor",
                         "in": "path",
-                        "description": "ID de la asignatura",
+                        "description": "ID del tutor",
                         "required": true,
                         "schema": {
                             "type": "string"
@@ -71,10 +114,12 @@
                         "description": "Error en la operación."
                     },
                     "404": {
-                        "description": "Error, provicia no existe"
+                        "description": "Recurso no encontrado"
                     }
                 }
-            },
+            }
+        },
+        "/api/asignaturas/{id}": {
             "put": {
                 "summary": "Actualizar una asignatura existente",
                 "operationId": "update",
@@ -940,7 +985,7 @@
                         "description": "Error en la operación."
                     },
                     "404": {
-                        "description": "Error, provicia no existe"
+                        "description": "Recurso no encontrado"
                     }
                 }
             },
@@ -1014,7 +1059,7 @@
                         "description": "ID Inválido"
                     },
                     "404": {
-                        "description": "Provincia no encontrada."
+                        "description": "Recurso no encontrado."
                     },
                     "405": {
                         "description": "Error en la operación."
@@ -1042,7 +1087,7 @@
                         "description": "ID Inválido"
                     },
                     "404": {
-                        "description": "Provincia no encontrada"
+                        "description": "Recurso no encontrado"
                     }
                 }
             }

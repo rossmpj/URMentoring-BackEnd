@@ -1,0 +1,22 @@
+id_tutor,nombre,apellido,sexo,correo_electronico,telefono ,fecha_nacimiento,ciudad,presentacion,nivel_estudios,experiencia,profesion,id_asignatura,nombre_asignatura
+0908102940,Amada ,Larrosa,Femenino,amadita_larrosa@hotmail.com,0988518723,1959-11-26,Guayaquil,Mucho gusto! Enseño Matemáticas. El mundo de los números es muy interesante,Tercer nivel,4,Ingeniería en Telemática,1000,Matemáticas
+0931983795,Cinthya ,Aguirre,Femenino,cinthyagui@gmail.com,0986670863,1988-11-13,Guayaquil,Aprendizaje Asegurado,Tercer nivel,1,Tecnóloga en administración de empresas ,1100,Comercio
+0927523456,Karol,Mendoza,Femenino,kmen@example.com,0986670864,1990-01-04,Quito,Aprendizaje Asegurado,Tercer nivel,1,Ingeniería en Computación,2000,Física
+0927523458,Manuel,Lopez,Masculino,mlro@example.com,0986670865,1997-05-05,Cuenca,Aprendizaje Asegurado,Tercer nivel,1,Ingeniería en Comercio Exterior,3000,Química
+0931983794,Alexandro,Martinez,Masculino,ale@example.com,0986670866,1989-10-31,Cuenca,Aprendizaje Asegurado,Tercer nivel,2,Ingeniería en Electrónica,1000,Matemáticas
+0907598674,Masato,Morikawa,Masculino,mmori@example.com,0986670867,1989-12-20,Quito,Aprendizaje Asegurado,Tercer nivel,5,Ingeniería en Potencia,2500,Programación
+0988574896,Alejandra,Carrasco,Femenino,aca@example.com,0986670868,1988-01-01,Ambato,Aprendizaje Asegurado,Tercer nivel,1,Ingeniería en Computación,100,Computación
+0951312625,Antony,Suarez,Masculino,asu@example.com,0986670869,1987-12-01,Esmeraldas,Aprendizaje Asegurado,Tercer nivel,4,Ingeniería en Computación,100,Computación
+0988754261,Jorge ,Ruiz,Masculino,jru@example.com,0986670870,1990-01-25,Guayaquil,Aprendizaje Asegurado,Tercer nivel,6,Tecnólogo en administración de empresas ,1100,Comercio
+0908897896,Freddy,Pachay,Masculino,frrr@example.com,0986670871,1988-01-14,Riobamba,Aprendizaje Asegurado,Tercer nivel,3,Ingeniería en Computación,1000,Matemáticas
+0954145364,Juan,Perez,Masculino,juanperez@example.com,0953222423,1998-30-12,Guayaquil,Saludos me gusta enseñar desde que estoy en el colegio,Tercer Nivel,2,Estudiante de Ingeniería ,1000,Matemáticas
+0965432765,Carlos,Cantos,Masculino,ccantos@outlook.es,0989898976,1997-31-08,Guayaquil,Me gusta enseñar y compartir mis conocimientos,Tercer Nivel,3,Estudiante de Ingeniería ,2000,Física
+0987654675,Jose,Castro,Masculino,jcastro@gmail.com,0765345273,1996-30-09,Guayaquil,Hola a todos me gusta enseñar desde que el entre a la universidad,Tercer Nivel,4,Estudiante de Ingeniería ,3000,Química
+0954368754,Edie,Pincay,Masculino,erpincays@outlook.com,0643212321,1980-20-02,Guayaquil,Saludos es un placer poder ayudarle a mejorar sus habilidades,Tercer Nivel,5,Estudiante de Ingeniería ,4000,Lengua y Literatura
+0456654321,Jenny,Jimenez,Femenino,jennyjf@outlook.com,0543265439,1989-10-11,Guayaquil,Me gusta enseñar desde que el entre a la universidad,Tercer Nivel,6,Estudiante de Ingeniería ,5000,Biología
+0885566886,emilio,leon,Masculino,eml@example.com,0999999988,1988-01-14,Guayaquil,Es un privilegio poder enseñarte la materia,Tercer Nivel,4,Estudiante de Ingeniería ,2000,Física
+0225563696,Mario,Hernandez,Masculino,khern@example.com,0922222233,1988-01-01,Guayaquil,Es un privilegio poder enseñar esta materia,Tercer Nivel,3,Estudiante de Ingeniería ,2000,Física
+0225448542,Boris,Sacoto,Masculino,dcoto@example.com,0977777775,1989-12-20,Guayaquil,Enseñar esta materia me apasiona,Tercer Nivel,2,Estudiante de Ingeniería ,2000,Física
+0758236584,Alexis,Mendoza,Masculino,almen@example.com,0944564444,1989-10-31,Guayaquil,Es un privilegio poder enseñar esta materia me apasiona mucho,Tercer Nivel,5,Ingeniería en Computación,1000,Matemáticas
+0125365896,David,Espinosa,Masculino,despin@example.com,0930000005,1990-30-12,Guayaquil,Es un honor poder enseñar esta materia,Tercer Nivel,6,Ingeniería en Computación,1000,Matemáticas
+0543564225,Carolina,Mererlo,Femenino,ecnms@hotmail.com,0535431753,1997-06-14,Cuenca, Mi objetivo es ayudarte a despejar tus dudas,Tercer Nivel,4,Estudiante de Ingeniería,2000,Física
