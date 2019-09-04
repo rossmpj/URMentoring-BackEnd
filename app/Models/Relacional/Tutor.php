@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tutor extends Model
 {
+    public $incrementing=false;
     protected $table = 'tutores';
     protected $primaryKey = '_id';
     /**

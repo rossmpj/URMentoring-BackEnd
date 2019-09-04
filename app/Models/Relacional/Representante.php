@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Representante extends Model
 {
-    protected $table = 'representantes';
+    public $incrementing=false;
+    protected $table = 'representantes';    
     protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
