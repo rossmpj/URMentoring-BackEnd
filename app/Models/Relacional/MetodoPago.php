@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class MetodoPago extends Model
 {
     protected $table = 'metodo_pagos';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','tipo', 'detalle'
+        'tipo', 'detalle'
     ];
     
     /**

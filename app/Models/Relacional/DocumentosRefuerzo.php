@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class DocumentosRefuerzo extends Model
 {
     protected $table = 'documentos_refuerzos';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','descripcion', 'comentario', 'id_tutoria'
+        'descripcion', 'comentario', 'id_tutoria'
     ];
 
     /**

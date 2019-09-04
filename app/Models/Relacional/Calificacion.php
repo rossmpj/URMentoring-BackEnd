@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Calificacion extends Model
 {
     protected $table = 'calificaciones';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','comentario', 'valoracion', 'id_estudiante', 'id_tutor'
+        'comentario', 'valoracion', 'id_estudiante', 'id_tutor'
     ];
 
     /**

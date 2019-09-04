@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Tutor extends Model
 {
     protected $table = 'tutores';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac', 'presentacion'
+        'nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac', 'presentacion'
     ];
 
     /**

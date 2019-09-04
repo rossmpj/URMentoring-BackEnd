@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AsignaturaTutor extends Model
 {
     protected $table = 'asignatura_tutores';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *

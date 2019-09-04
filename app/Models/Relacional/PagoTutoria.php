@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class PagoTutoria extends Model
 {
     protected $table = 'pago_tutorias';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','id_titular', 'numero_tarjeta', 'estado', 'fecha_expiracion_tarjeta', 'id_tutoria', 'id_representante', 'id_metodo_pago'
+        'id_titular', 'numero_tarjeta', 'estado', 'fecha_expiracion_tarjeta', 'id_tutoria', 'id_representante', 'id_metodo_pago'
     ];
 
     /**
