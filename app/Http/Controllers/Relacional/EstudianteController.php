@@ -135,9 +135,9 @@ class EstudianteController extends Controller
      * )
      *
      */
-    public function show($id)
+    public function show($correo)
     {
-        return Estudiante::where('_id',$id)->get();
+         return Estudiante::where('correo',$correo)->get();
     }
 
 

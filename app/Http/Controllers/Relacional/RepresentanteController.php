@@ -138,9 +138,9 @@ class RepresentanteController extends Controller
      * )
      *
      */
-    public function show($id)
+    public function show($correo)
     {
-         return Representante::where('_id',$id)->get();
+         return Representante::where('correo',$correo)->get();
     }
 
 

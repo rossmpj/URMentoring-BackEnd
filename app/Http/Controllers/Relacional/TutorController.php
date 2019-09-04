@@ -146,9 +146,9 @@ class TutorController extends Controller
      * )
      *
      */
-    public function show($id)
+    public function show($correo)
     {
-        return Tutor::where('_id',$id)->get();
+         return Tutor::where('correo',$correo)->get();
     }
 
 
