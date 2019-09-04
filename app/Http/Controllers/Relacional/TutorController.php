@@ -284,4 +284,31 @@ class TutorController extends Controller
     {
         Tutor::find($id)->delete();
     }
+
+
+      public function estadisticaxtutor($idtutor)
+    {
+         return \DB::table('asignatura_tutores')
+            ->join('asignaturas','asignaturas._id','=','asignatura_tutores.id_asignatura')
+            ->join('tutores','tutores._id','=','asignatura_tutores.id_tutor')
+            ->join('tutorias','tutorias.id_asignatura_tutor','=','asignatura_tutores._id')
+            ->select(\DB::raw('asignaturas.nombre as Materia,count(tutorias.id_asignatura_tutor) as Cantidad'))
+            ->where('tutores._id',$idtutor)
+            ->groupBy('asignaturas.nombre')
+            ->get(); 
+
+    }
+
+    public function diezMejores()
+    {
+         return \DB::table('tutores')
+         ->join('calificaciones','calificaciones.id_tutor','=','tutores._id')
+         ->select('tutores.nombre','tutores.apellido','calificaciones.valoracion')
+         ->whereBetween('calificaciones.valoracion',[4,5])
+         ->orderBy('calificaciones.valoracion','asc')
+         ->limit(10)
+         ->distinct()
+         ->get();
+    }
+
 }
