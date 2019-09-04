@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::resource('representantes','Relacional\RepresentanteController');
 Route::resource('estudiantes','Relacional\EstudianteController');
 Route::resource('tutores','Relacional\TutorController');
-Route::get('estadisticaTutores/{correo}','Relacional\TutorController@estadisticaxtutor');
+Route::get('estadisticaTutores/{idtutor}','Relacional\TutorController@estadisticaxtutor');
 Route::get('diezMejores','Relacional\TutorController@diezMejores');
 Route::resource('formaciontutores','Relacional\FormacionTutorController');
 Route::resource('asignaturas','Relacional\AsignaturaController');
