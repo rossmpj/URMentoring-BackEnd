@@ -14,7 +14,7 @@ class PagoTutoria extends Model
      * @var array
      */
     protected $fillable = [
-        'id_titular', 'numero_tarjeta', 'estado', 'fecha_expiracion_tarjeta', 'id_tutoria', 'id_representante', 'id_metodo_pago'
+        '_id','id_titular', 'numero_tarjeta', 'estado', 'fecha_expiracion_tarjeta', 'id_tutoria', 'id_representante', 'id_metodo_pago'
     ];
 
     /**

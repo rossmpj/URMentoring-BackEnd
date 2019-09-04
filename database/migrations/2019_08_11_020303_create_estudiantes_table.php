@@ -14,7 +14,7 @@ class CreateEstudiantesTable extends Migration
     public function up()
     {
         Schema::create('estudiantes', function (Blueprint $table) {
-            $table->string('id', 10);
+            $table->string('_id', 10);
             $table->string('nombre');
             $table->string('apellido');
             $table->char('sexo', 1);
@@ -23,10 +23,10 @@ class CreateEstudiantesTable extends Migration
             $table->timestamps();
             
             $table->string('id_representante', 10);
-            $table->primary('id');
+            $table->primary('_id');
 
             $table->foreign('id_representante')
-            ->references('id')->on('representantes')
+            ->references('_id')->on('representantes')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

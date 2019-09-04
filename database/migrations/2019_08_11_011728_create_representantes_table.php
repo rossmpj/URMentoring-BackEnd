@@ -14,7 +14,7 @@ class CreateRepresentantesTable extends Migration
     public function up()
     {
         Schema::create('representantes', function (Blueprint $table) {
-            $table->string('id', 10);
+            $table->string('_id', 10);
             $table->string('nombre');
             $table->string('apellido');
             $table->string('correo')->unique();
@@ -24,7 +24,7 @@ class CreateRepresentantesTable extends Migration
             $table->date('fecha_nac');
             $table->timestamps();
 
-            $table->primary('id');
+            $table->primary('_id');
         });
     }
 

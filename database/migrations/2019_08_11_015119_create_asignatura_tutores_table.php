@@ -14,19 +14,19 @@ class CreateAsignaturaTutoresTable extends Migration
     public function up()
     {
         Schema::create('asignatura_tutores', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('_id');
             $table->timestamps();
 
             $table->string('id_asignatura');
             $table->string('id_tutor', 10);
 
             $table->foreign('id_asignatura')
-            ->references('id')->on('asignaturas')
+            ->references('_id')->on('asignaturas')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign('id_tutor')
-            ->references('id')->on('tutores')
+            ->references('_id')->on('tutores')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

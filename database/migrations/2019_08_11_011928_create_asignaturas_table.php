@@ -14,11 +14,11 @@ class CreateAsignaturasTable extends Migration
     public function up()
     {
         Schema::create('asignaturas', function (Blueprint $table) {
-            $table->string('id');
+            $table->string('_id');
             $table->string('nombre');
             $table->timestamps();
 
-            $table->primary('id');
+            $table->primary('_id');
         });
     }
 

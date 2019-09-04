@@ -14,7 +14,7 @@ class MetodoPago extends Model
      * @var array
      */
     protected $fillable = [
-        'tipo', 'detalle'
+        '_id','tipo', 'detalle'
     ];
     
     /**

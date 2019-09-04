@@ -103,7 +103,7 @@ class AsignaturaTutorController extends Controller
      */
     public function show($id)
     {
-       return AsignaturaTutor::where('id',$id)->get();
+       return AsignaturaTutor::where('_id',$id)->get();
     }
 
     

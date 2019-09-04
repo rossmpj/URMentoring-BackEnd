@@ -103,7 +103,7 @@ class TutorController extends Controller
     public function store(Request $request)
     {
         $est= new Tutor();
-        $est->id= $request->get('id');
+        $est->id= $request->get('_id');
         $est->nombre= $request->get('nombre');
         $est->apellido= $request->get('apellido');
         $est->sexo= $request->get('sexo');
@@ -148,7 +148,7 @@ class TutorController extends Controller
      */
     public function show($id)
     {
-        return Tutor::where('id',$id)->get();
+        return Tutor::where('_id',$id)->get();
     }
 
 

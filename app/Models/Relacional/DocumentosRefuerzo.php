@@ -14,7 +14,7 @@ class DocumentosRefuerzo extends Model
      * @var array
      */
     protected $fillable = [
-        'descripcion', 'comentario', 'id_tutoria'
+        '_id','descripcion', 'comentario', 'id_tutoria'
     ];
 
     /**

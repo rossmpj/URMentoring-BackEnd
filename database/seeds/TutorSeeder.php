@@ -14,7 +14,7 @@ class TutorSeeder extends Seeder
     {
     	DB::table('tutores')->delete() ;
     	Tutor::create([
-        	'id' => 'T125465709',
+        	'_id' => 'T125465709',
         	'nombre' => 'Sandra',
         	'apellido'=>'Fuentes',
         	'sexo'=>'F',
@@ -25,7 +25,7 @@ class TutorSeeder extends Seeder
 			'presentacion' => 'Me gusta mucho enseñar, tengo conocimientos variados en ciencias y matemáticas'
 	    ]);
 	    Tutor::create([
-        	'id' => 'T175433246',
+        	'_id' => 'T175433246',
         	'nombre' => 'Cesar',
         	'apellido'=>'Sao',
         	'sexo'=>'M',
@@ -36,7 +36,7 @@ class TutorSeeder extends Seeder
 			'presentacion' => 'Enseñar es mi pasión, soy muy bueno explicando en poco tiempo'
 	    ]);
 	    Tutor::create([
-        	'id' => 'T034578101',
+        	'_id' => 'T034578101',
         	'nombre' => 'Javier',
         	'apellido'=>'Acebo',
         	'sexo'=>'M',
@@ -47,7 +47,7 @@ class TutorSeeder extends Seeder
 			'presentacion' => 'Tengo el don de enseñar, y soy muy didáctico al momento de dar una explicación'
 	    ]);
 	    Tutor::create([
-        	'id' => 'T784563984',
+        	'_id' => 'T784563984',
         	'nombre' => 'Stefania',
         	'apellido'=>'Morales',
         	'sexo'=>'F',
@@ -58,7 +58,7 @@ class TutorSeeder extends Seeder
 			'presentacion' => 'Soy doctora en Ciencias, y me gustan las matemáticas.'
 	    ]);
 	    Tutor::create([
-        	'id' => 'T098784562',
+        	'_id' => 'T098784562',
         	'nombre' => 'Douglas',
         	'apellido'=>'Miranda',
         	'sexo'=>'M',

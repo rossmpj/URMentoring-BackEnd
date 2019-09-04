@@ -14,7 +14,7 @@ class Tutoria extends Model
      * @var array
      */
     protected $fillable = [
-        'costo', 'estado', 'hora_inicio', 'hora_fin', 'tema', 'detalle', 'fecha', 'id_asignatura_tutor', 'id_estudiante'
+        '_id','costo', 'estado', 'hora_inicio', 'hora_fin', 'tema', 'detalle', 'fecha', 'id_asignatura_tutor', 'id_estudiante'
     ];
 
     /**

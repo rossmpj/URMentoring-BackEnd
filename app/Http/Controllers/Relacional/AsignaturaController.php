@@ -98,9 +98,9 @@ class AsignaturaController extends Controller
     public function show($id_tutor)
     {
         return \DB::table('asignaturas')
-            ->join('asignatura_tutores','asignaturas.id','=','asignatura_tutores.id_asignatura')
-            ->join('tutores','tutores.id','=','asignatura_tutores.id_tutor')
-            ->select('asignaturas.nombre','asignaturas.id')
+            ->join('asignatura_tutores','asignaturas._id','=','asignatura_tutores.id_asignatura')
+            ->join('tutores','tutores._id','=','asignatura_tutores.id_tutor')
+            ->select('asignaturas.nombre','asignaturas._id')
             ->where('asignatura_tutores.id_tutor',$id_tutor)
             ->get(); 
     }

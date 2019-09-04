@@ -14,7 +14,7 @@ class FormacionTutor extends Model
      * @var array
      */
     protected $fillable = [
-        'nivel_estudios', 'experiencia', 'profesion', 'id_tutor'
+        '_id','nivel_estudios', 'experiencia', 'profesion', 'id_tutor'
     ];
 
     /**

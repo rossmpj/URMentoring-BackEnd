@@ -14,7 +14,7 @@ class RepresentanteSeeder extends Seeder
     {
     	DB::table('representantes')->delete() ;
         Representante::create([
-        	'id' => 'R094344345',
+        	'_id' => 'R094344345',
         	'nombre' => 'Sam',
         	'apellido'=>'Zavala',
 			'correo' => 'saza@gmail.com',
@@ -24,7 +24,7 @@ class RepresentanteSeeder extends Seeder
 			'fecha_nac' => '1990-08-23'
 	 	]);
         Representante::create([
-        	'id' => 'R094354653',
+        	'_id' => 'R094354653',
         	'nombre' => 'Lety',
         	'apellido'=>'Correa',
 			'correo' => 'lect@gmail.com',
@@ -34,7 +34,7 @@ class RepresentanteSeeder extends Seeder
 			'fecha_nac' => '1990-03-07'
 	 	]);
         Representante::create([
-        	'id' => 'R094256888',
+        	'_id' => 'R094256888',
         	'nombre' => 'Rodrigo',
         	'apellido'=>'Dubois',
 			'correo' => 'jalal@gmail.com',
@@ -44,7 +44,7 @@ class RepresentanteSeeder extends Seeder
 			'fecha_nac' => '1960-08-08'
 	 	]);
         Representante::create([
-        	'id' => 'R092954357',
+        	'_id' => 'R092954357',
         	'nombre' => 'Nathaly',
         	'apellido'=>'Paz',
 			'correo' => 'noparty@gmail.com',
@@ -54,7 +54,7 @@ class RepresentanteSeeder extends Seeder
 			'fecha_nac' => '1957-12-26'
 	 	]);
         Representante::create([
-        	'id' => 'R096524657',
+        	'_id' => 'R096524657',
         	'nombre' => 'Carlos',
         	'apellido'=>'Villon',
 			'correo' => 'theewrt@gmail.com',

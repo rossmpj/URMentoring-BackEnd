@@ -14,7 +14,7 @@ class EstudianteSeeder extends Seeder
     {
         DB::table('estudiantes')->delete() ;
         Estudiante::create([
-            'id' => 'E031548795',
+            '_id' => 'E031548795',
             'nombre' => 'Juan',
             'apellido' => 'Asanza',
             'sexo' => 'M',
@@ -23,7 +23,7 @@ class EstudianteSeeder extends Seeder
             'id_representante' => 'R094344345',
         ]);
         Estudiante::create([
-            'id' => 'E17536842',
+            '_id' => 'E17536842',
             'nombre' => 'Victor',
             'apellido' => 'Mazzini',
             'sexo' => 'M',
@@ -32,7 +32,7 @@ class EstudianteSeeder extends Seeder
             'id_representante' => 'R094354653',
         ]);
         Estudiante::create([
-            'id' => 'E032587419',
+            '_id' => 'E032587419',
             'nombre' => 'Carla',
             'apellido' => 'Dubois',
             'sexo' => 'F',
@@ -41,7 +41,7 @@ class EstudianteSeeder extends Seeder
             'id_representante' => 'R094256888',
         ]);
         Estudiante::create([
-            'id' => 'E920135782',
+            '_id' => 'E920135782',
             'nombre' => 'Kelly',
             'apellido' => 'Salas',
             'sexo' => 'F',
@@ -50,7 +50,7 @@ class EstudianteSeeder extends Seeder
             'id_representante' => 'R092954357',
         ]);
         Estudiante::create([
-            'id' => 'E013256984',
+            '_id' => 'E013256984',
             'nombre' => 'Lili',
             'apellido' => 'Villon',
             'sexo' => 'F',
@@ -59,7 +59,7 @@ class EstudianteSeeder extends Seeder
             'id_representante' => 'R096524657',
         ]);
         Estudiante::create([
-            'id' => 'E013256985',
+            '_id' => 'E013256985',
             'nombre' => 'Daniel',
             'apellido' => 'Villon',
             'sexo' => 'M',

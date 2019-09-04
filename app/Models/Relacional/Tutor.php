@@ -14,7 +14,7 @@ class Tutor extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac', 'presentacion'
+        '_id','nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac', 'presentacion'
     ];
 
     /**

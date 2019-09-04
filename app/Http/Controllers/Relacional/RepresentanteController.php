@@ -95,7 +95,7 @@ class RepresentanteController extends Controller
     public function store(Request $request)
     {
         $est= new Representante();
-        $est->id= $request->get('id');
+        $est->id= $request->get('_id');
         $est->nombre= $request->get('nombre');
         $est->apellido= $request->get('apellido');
         $est->correo= $request->get('correo');
@@ -140,7 +140,7 @@ class RepresentanteController extends Controller
      */
     public function show($id)
     {
-         return Representante::where('id',$id)->get();
+         return Representante::where('_id',$id)->get();
     }
 
 

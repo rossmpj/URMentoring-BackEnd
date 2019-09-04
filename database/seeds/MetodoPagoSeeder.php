@@ -14,12 +14,12 @@ class MetodoPagoSeeder extends Seeder
     {
     	DB::table('metodo_pagos')->delete() ;
     	MetodoPago::create([
-        	'id' => 'TARJET01',
+        	'_id' => 'TARJET01',
         	'tipo' => 'Débito',
         	'detalle'=>'Pago con tarjeta de débito'
 	    ]);
 	    MetodoPago::create([
-        	'id' => 'PAY01',
+        	'_id' => 'PAY01',
         	'tipo' => 'Paypal',
         	'detalle'=>'Pago por internet'
 	    ]);

@@ -14,7 +14,7 @@ class CreateTutoriasTable extends Migration
     public function up()
     {
         Schema::create('tutorias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('_id');
             $table->double('costo');
             $table->string('estado');
             $table->time('hora_inicio');
@@ -28,12 +28,12 @@ class CreateTutoriasTable extends Migration
             $table->string('id_estudiante', 10);
 
             $table->foreign('id_asignatura_tutor')
-            ->references('id')->on('asignatura_tutores')
+            ->references('_id')->on('asignatura_tutores')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign('id_estudiante')
-            ->references('id')->on('estudiantes')
+            ->references('_id')->on('estudiantes')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

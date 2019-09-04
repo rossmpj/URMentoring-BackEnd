@@ -14,7 +14,7 @@ class CreateCalificacionesTable extends Migration
     public function up()
     {
         Schema::create('calificaciones', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('_id');
             $table->string('comentario');
             $table->integer('valoracion');
             $table->timestamps();
@@ -23,12 +23,12 @@ class CreateCalificacionesTable extends Migration
             $table->string('id_tutor', 10);
 
             $table->foreign('id_estudiante')
-            ->references('id')->on('estudiantes')
+            ->references('_id')->on('estudiantes')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign('id_tutor')
-            ->references('id')->on('tutores')
+            ->references('_id')->on('tutores')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

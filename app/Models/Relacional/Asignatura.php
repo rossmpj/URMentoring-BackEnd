@@ -14,7 +14,7 @@ class Asignatura extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre'
+        '_id','nombre'
     ];
 
     /**

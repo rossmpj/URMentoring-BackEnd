@@ -14,14 +14,14 @@ class CreateDocumentosRefuerzosTable extends Migration
     public function up()
     {
         Schema::create('documentos_refuerzos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('_id');
             $table->string('descripcion');
             $table->string('comentario');
             $table->timestamps();
 
             $table->bigInteger('id_tutoria')->unsigned();
             $table->foreign('id_tutoria')
-            ->references('id')->on('tutorias')
+            ->references('_id')->on('tutorias')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

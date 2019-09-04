@@ -14,7 +14,7 @@ class CreatePagoTutoriasTable extends Migration
     public function up()
     {
         Schema::create('pago_tutorias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('_id');
             $table->string('id_titular');
             $table->string('numero_tarjeta');
             $table->string('estado');
@@ -26,17 +26,17 @@ class CreatePagoTutoriasTable extends Migration
             $table->string('id_metodo_pago');
 
             $table->foreign('id_tutoria')
-            ->references('id')->on('tutorias')
+            ->references('_id')->on('tutorias')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign('id_representante')
-            ->references('id')->on('representantes')
+            ->references('_id')->on('representantes')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign('id_metodo_pago')
-            ->references('id')->on('metodo_pagos')
+            ->references('_id')->on('metodo_pagos')
             ->onDelete('cascade')
             ->onUpdate('cascade');
         });

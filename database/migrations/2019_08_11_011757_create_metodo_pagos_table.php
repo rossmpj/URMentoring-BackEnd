@@ -14,12 +14,12 @@ class CreateMetodoPagosTable extends Migration
     public function up()
     {
         Schema::create('metodo_pagos', function (Blueprint $table) {
-            $table->string('id');
+            $table->string('_id');
             $table->string('tipo');
             $table->string('detalle');
             $table->timestamps();
 
-            $table->primary('id');
+            $table->primary('_id');
         });
     }
 

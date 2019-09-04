@@ -92,7 +92,7 @@ class EstudianteController extends Controller
     public function store(Request $request)
     {
         $est= new Estudiante();
-        $est->id= $request->get('id');
+        $est->id= $request->get('_id');
         $est->nombre= $request->get('nombre');
         $est->apellido= $request->get('apellido');
         $est->sexo= $request->get('sexo');
@@ -137,7 +137,7 @@ class EstudianteController extends Controller
      */
     public function show($id)
     {
-        return Estudiante::where('id',$id)->get();
+        return Estudiante::where('_id',$id)->get();
     }
 
 
