@@ -14,7 +14,7 @@ class AsignaturaTutor extends Model
      * @var array
      */
     protected $fillable = [
-        '_id','id_asignatura', 'id_tutor'
+        'id_asignatura', 'id_tutor'
     ];
 
     /**
