@@ -183,13 +183,10 @@ class FormacionTutorController extends Controller
      */
     public function update(Request $request,$id)
     {
-       // $id_tu= FormacionTutor::where('id',$id_tutor)->get()
-        $est= FormacionTutor::where('id_tutor',$id)->get(); 
-        $est->nivel_estudios= $request->get('nivel_estudios');
-        $est->experiencia= $request->get('experiencia');
-        $est->profesion= $request->get('profesion');
-        $est->id_tutor= $request->get('id_tutor');
-        $est->save();
+     return   \DB::table('formacion_tutores')
+            ->where('id_tutor', $id)
+            ->update(['nivel_estudios' => $request->get('nivel_estudios'), 'experiencia'=> $request->get('experiencia'),
+                'profesion' => $request->get('profesion'), 'id_tutor' => $request->get('id_tutor') ]);
     }
 
      /**
