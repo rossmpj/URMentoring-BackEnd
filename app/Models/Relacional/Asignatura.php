@@ -3,9 +3,11 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class Asignatura extends Model
 {
+    use CrudTrait;
     public $incrementing=false;
     protected $table = 'asignaturas';
     protected $primaryKey = '_id';
@@ -15,7 +17,7 @@ class Asignatura extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre'
+        '_id','nombre'
     ];
 
     /**

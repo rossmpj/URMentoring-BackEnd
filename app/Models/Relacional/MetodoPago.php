@@ -3,9 +3,11 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class MetodoPago extends Model
 {
+    use CrudTrait;
     protected $table = 'metodo_pagos';
     protected $primaryKey = '_id';
     /**

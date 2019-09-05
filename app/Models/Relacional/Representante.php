@@ -3,9 +3,11 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class Representante extends Model
 {
+    use CrudTrait;
     public $incrementing=false;
     protected $table = 'representantes';    
     protected $primaryKey = '_id';
@@ -15,7 +17,7 @@ class Representante extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac'
+        '_id','nombre', 'apellido', 'correo', 'sexo', 'telefono', 'ciudad', 'fecha_nac'
     ];
 
     /**

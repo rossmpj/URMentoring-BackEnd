@@ -3,9 +3,11 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class DocumentosRefuerzo extends Model
 {
+    use CrudTrait;
     protected $table = 'documentos_refuerzos';
     protected $primaryKey = '_id';
     /**

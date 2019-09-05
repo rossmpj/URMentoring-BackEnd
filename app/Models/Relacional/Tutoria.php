@@ -3,18 +3,20 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class Tutoria extends Model
 {
+    use CrudTrait;
     protected $table = 'tutorias';
-
+    protected $primaryKey = '_id';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        '_id','costo', 'estado', 'hora_inicio', 'hora_fin', 'tema', 'detalle', 'fecha', 'id_asignatura_tutor', 'id_estudiante'
+        'costo', 'estado', 'hora_inicio', 'hora_fin', 'tema', 'detalle', 'fecha', 'id_asignatura_tutor', 'id_estudiante'
     ];
 
     /**

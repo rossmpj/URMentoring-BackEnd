@@ -3,9 +3,11 @@
 namespace App\Models\Relacional;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class Tutor extends Model
 {
+    use CrudTrait;
     public $incrementing=false;
     protected $table = 'tutores';
     protected $primaryKey = '_id';
