@@ -27,40 +27,10 @@ class HistoricoController extends Controller
         return Historico::all();
     }
 
-    /**
-     * @OA\Get(
-     *     path="/api/historicos/{materia}",
-     *     summary="Buscar registros dada una materia impartida por un tutor, ordenados por su nivel de experiencia",
-     *     description="Retorna registro del histórico",
-     *     operationId="show",
-     *     @OA\Parameter(
-     *         name="materia",
-     *         in="path",
-     *         description="Nombre de la asignatura",
-     *         required=true,
-     *         @OA\Schema(
-     *             type="string"
-     *         )
-     *     ),
-     *     @OA\Response(
-     *         response=200,
-     *         description="Operación realizada correctamente."
-     *     ),
-     *     @OA\Response(
-     *         response=400,
-     *         description="Error en la operación."
-     *     ),
-     *     @OA\Response(
-     *         response=404,
-     *         description="Error, recurso no encontrado"
-     *     )
-     * )
-     *
-     */
-    public function show($materia)
+    public function show($id_tutor)
     {
-         return Historico::where('nombre_asignatura',$materia)
-         ->orderBy('experiencia', 'desc')
+         return Historico::where('id_tutor',$id_tutor)
+         ->select('id_asignatura', 'nombre_asignatura')
          ->get();
     }
 }
