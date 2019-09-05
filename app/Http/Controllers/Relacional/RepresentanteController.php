@@ -95,7 +95,7 @@ class RepresentanteController extends Controller
     public function store(Request $request)
     {
         $est= new Representante();
-        $est->id= $request->get('_id');
+        $est->_id= $request->get('_id');
         $est->nombre= $request->get('nombre');
         $est->apellido= $request->get('apellido');
         $est->correo= $request->get('correo');
