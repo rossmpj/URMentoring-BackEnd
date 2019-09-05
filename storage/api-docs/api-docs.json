@@ -19,35 +19,6 @@
                 }
             }
         },
-        "/api/historicos/{materia}": {
-            "get": {
-                "summary": "Buscar registros dada una materia impartida por un tutor, ordenados por su nivel de experiencia",
-                "description": "Retorna registro del histórico",
-                "operationId": "show",
-                "parameters": [
-                    {
-                        "name": "materia",
-                        "in": "path",
-                        "description": "Nombre de la asignatura",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Operación realizada correctamente."
-                    },
-                    "400": {
-                        "description": "Error en la operación."
-                    },
-                    "404": {
-                        "description": "Error, recurso no encontrado"
-                    }
-                }
-            }
-        },
         "/api/asignaturas": {
             "get": {
                 "summary": "Mostrar todos las asignaturas.",
