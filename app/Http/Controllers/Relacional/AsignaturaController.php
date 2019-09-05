@@ -191,4 +191,17 @@ class AsignaturaController extends Controller
         $est= Asignatura::find($id); 
          $est->delete();
     }
+
+
+    public function costoPromedioxMateria()
+    {
+
+         return \DB::table('tutorias')
+         ->join('asignatura_tutores','tutorias.id_asignatura_tutor','=','asignatura_tutores._id')
+         ->join('tutores','tutores._id','=','asignatura_tutores.id_tutor')
+         ->join('asignaturas','asignaturas._id','=','asignatura_tutores.id_asignatura')
+         ->select(\DB::raw('asignaturas.nombre as Materia, AVG(tutorias.costo) as Promedio'))
+         ->groupBy('asignaturas._id')
+         ->get();
+    }
 }

@@ -18,6 +18,7 @@ Route::resource('estudiantes','Relacional\EstudianteController');
 Route::resource('tutores','Relacional\TutorController');
 Route::get('estadisticaTutores/{idtutor}','Relacional\TutorController@estadisticaxtutor');
 Route::get('diezMejores','Relacional\TutorController@diezMejores');
+Route::get('costoPromedioPorMaterias','Relacional\AsignaturaController@costoPromedioxMateria');
 Route::resource('formaciontutores','Relacional\FormacionTutorController');
 Route::resource('asignaturas','Relacional\AsignaturaController');
 Route::resource('asignaturatutores','Relacional\AsignaturaTutorController');
