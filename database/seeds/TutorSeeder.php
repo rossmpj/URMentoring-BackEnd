@@ -53,7 +53,7 @@ class TutorSeeder extends Seeder
         	'sexo'=>'F',
 			'correo' => 'stemf@hotmail.com',
 			'telefono' => '0335664376',
-			'fecha_nac' => '1980-07-14',
+			'fecha_nac' => '1996-07-14',
 			'ciudad' => 'Esmeraldas',
 			'presentacion' => 'Soy doctora en Ciencias, y me gustan las matemáticas.'
 	    ]);
@@ -64,7 +64,7 @@ class TutorSeeder extends Seeder
         	'sexo'=>'M',
 			'correo' => 'dbancg@hotmail.com',
 			'telefono' => '0978664377',
-			'fecha_nac' => '1991-06-02',
+			'fecha_nac' => '2000-06-02',
 			'ciudad' => 'Guayaquil',
 			'presentacion' => 'Me gusta mucho enseñar, estoy dispuesto a ayudarte con tus dudas en cualquier momento'
 	    ]);
