@@ -195,12 +195,11 @@ class AsignaturaController extends Controller
 
     public function costoPromedioxMateria()
     {
-
          return \DB::table('tutorias')
          ->join('asignatura_tutores','tutorias.id_asignatura_tutor','=','asignatura_tutores._id')
          ->join('tutores','tutores._id','=','asignatura_tutores.id_tutor')
          ->join('asignaturas','asignaturas._id','=','asignatura_tutores.id_asignatura')
-         ->select(\DB::raw('asignaturas.nombre as Materia, AVG(tutorias.costo) as Promedio'))
+         ->select(\DB::raw('asignaturas.nombre as Materia, AVG(tutorias.costo) as CostoPromedio'))
          ->groupBy('asignaturas._id')
          ->get();
     }

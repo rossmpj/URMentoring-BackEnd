@@ -311,4 +311,21 @@ class TutorController extends Controller
          ->get();
     }
 
+    public function tutoresMayoresa25()
+    {
+         return \DB::table('tutores')
+         ->select(\DB::raw('COUNT(tutores._id) as MayoresA25'))
+          ->whereRaw('TIMESTAMPDIFF(YEAR, tutores.fecha_nac, CURDATE()) >= 25')
+         ->get();
+    }
+
+    public function tutoresMenoresa25()
+    {
+         return \DB::table('tutores')
+         ->select(\DB::raw('COUNT(tutores._id) as MenoresA25'))
+         ->whereRaw('TIMESTAMPDIFF(YEAR, tutores.fecha_nac, CURDATE()) < 25')
+         ->get();
+    }
+
+
 }
